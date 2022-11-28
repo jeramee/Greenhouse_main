@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<style>
+    .container{
+        text-align: left;
+        height: 300px;
+        display: table-cell;
+        vertical-align: bottom;
+    }
+</style>
+
+<div class="container">
+
+    <div>
+        <h1>In Greenhouse {{ greenhouse.id }} id</h1>
+        {% for greenhouse in greenhouses %}
+            <div>
+                <h1>In Greenhouse {{ greenhouse.id }}</h1>
+                <h3><a href="{% url 'greenhouse' greenhouse.id %}">{{greenhouse.name}}</a></h3>
+            </div>
+        {% endfor %}
+    </div>
+
+    <h1>Add Device</h1>
+
+</div>
+
+{% endblock %}

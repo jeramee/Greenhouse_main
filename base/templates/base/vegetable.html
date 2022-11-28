@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<style>
+    .container{
+        text-align: left;
+        height: 300px;
+        display: table-cell;
+        vertical-align: bottom;
+    }
+</style>
+
+<div class="container">
+
+    <h1>Vegetables</h1>
+
+    <div>
+        <div>
+            {% for vegetable in vegetables %}
+                <div>   
+                    <h5>{{vegetable.id}} -- <a href="{% url 'vegetable' vegetable.id %}">'Vegetable Name:' {{vegetable.name}}</a></h5> 
+                    <h5>{{vegetable.id}} -- {{vegetable.name}} -- <a href="{% url vegetable.description vegetable.id %}">'Vegetable Name:' {{vegetable.name}}</a></h5> 
+                </div>
+            {% endfor %}  
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<style>
+    .container{
+        text-align: left;
+        height: 530px;
+        display: table-cell;
+        vertical-align: bottom;
+        font-size: large;
+    }
+</style>
+
+<div class="container">
+
+    <h2>Greenhouse 6</h2>
+    <h3>Add Device</h3>
+
+    <div>
+        <div> 
+            {% for device in devices %}
+                <div>   
+                    <h5><a>{{device.id}} --  device Name: {{device.name}}</a>
+
+                    {% if device.id == 1 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{device.description}}')">Description</button></h5>              
+                    {% elif device.id == 2 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{device.description}}')">Description</button></h5>    
+                    {% elif device.id == 3 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{device.description}}')">Description</button></h5>
+                    {% elif device.id == 4 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{device.description}}')">Description</button></h5>
+                    {% elif device.id == 5 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{device.description}}')">Description</button></h5>
+                    {% elif device.id == 6 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{device.description}}')">Description</button></h5>
+                    {% elif device.id == 7 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{device.description}}')">Description</button></h5>
+                    {% elif device.id == 8 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{device.description}}')">Description</button></h5>
+                    {% endif %}
+                </div>
+            {% endfor %}  
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<style>
+    .container{
+        text-align: left;
+        height: 300px;
+        display: table-cell;
+        vertical-align: bottom;
+    }
+</style>
+
+<div class="container">
+
+    <h1>{{greenhouse.name}}</h1>
+
+    <div>
+        <div>
+            <h5>'1' {{add_device.name}} -- <a href="{% url 'add_device' %}">'Add Device' {{add_device.name}}</a></h5>
+            <h5>'2' {{add_plant.name}} -- <a href="{% url 'add_plant' %}">'Add Plant' {{add_plant.name}}</a></h5>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

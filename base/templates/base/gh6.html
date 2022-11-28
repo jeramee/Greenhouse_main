@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<style>
+    .container{
+        text-align: left;
+        height: 300px;
+        display: table-cell;
+        vertical-align: bottom;
+    }
+</style>
+
+<div class="container">
+
+    <h2>Greenhouse 6</h2>
+
+    <div>
+        <div>
+            <h5>'1' {{gh6_add_device.name}} -- <a href="{% url 'gh6_add_device' %}">'Add Device' {{gh6_add_device.name}}</a></h5>
+            <h5>'2' {{gh6_add_fruit.name}} -- <a href="{% url 'gh6_add_fruit' %}">'Add Fruit' {{gh6_add_fruit.name}}</a></h5>
+            <h5>'3' {{gh6_add_herb.name}} -- <a href="{% url 'gh6_add_herb' %}">'Add Herb' {{gh6_add_herb.name}}</a></h5>
+            <h5>'4' {{gh6_add_vegetable.name}} -- <a href="{% url 'gh6_add_vegetable' %}">'Add Vegetable' {{gh6_add_vegetable.name}}</a></h5>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

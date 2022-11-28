@@ -1,0 +1,50 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<style>
+    .container{
+        text-align: left;
+        height: 530px;
+        display: table-cell;
+        vertical-align: bottom;
+        font-size: large;
+    }
+</style>
+
+<div class="container">
+
+    <h2>Greenhouse 4</h2>
+    <h3>Add Fruit</h3>
+
+    <div>
+        <div> 
+            {% for fruit in fruits %}
+                <div>   
+                    <h5><a>{{fruit.id}} --  fruit Name: {{fruit.name}}</a>
+
+                    {% if fruit.id == 1 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{fruit.description}}')">Description</button></h5>              
+                    {% elif fruit.id == 2 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{fruit.description}}')">Description</button></h5>    
+                    {% elif fruit.id == 3 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{fruit.description}}')">Description</button></h5>
+                    {% elif fruit.id == 4 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{fruit.description}}')">Description</button></h5>
+                    {% elif fruit.id == 5 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{fruit.description}}')">Description</button></h5>
+                    {% elif fruit.id == 6 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{fruit.description}}')">Description</button></h5>
+                    {% elif fruit.id == 7 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{fruit.description}}')">Description</button></h5>
+                    {% elif fruit.id == 8 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{fruit.description}}')">Description</button></h5>
+                    {% endif %}
+                </div>
+            {% endfor %}  
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

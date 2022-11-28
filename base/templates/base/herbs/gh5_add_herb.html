@@ -1,0 +1,55 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<style>
+    .container{
+        text-align: left;
+        height: 530px;
+        display: table-cell;
+        vertical-align: bottom;
+        font-size: large;
+    }
+</style>
+
+<div class="container">
+
+    <h2>Greenhouse 5</h2>
+    <h3>Add Herb</h3>
+
+    <div>
+        <div> 
+            {% for herb in herbs %}
+                <div>   
+                    <h5><a>{{herb.id}} --  herb Name: {{herb.name}}</a>
+
+                    {% if herb.id == 1 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{herb.description}}')">Description</button></h5>              
+                    {% elif herb.id == 2 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{herb.description}}')">Description</button></h5>    
+                    {% elif herb.id == 3 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{herb.description}}')">Description</button></h5>
+                    {% elif herb.id == 4 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{herb.description}}')">Description</button></h5>
+                    {% elif herb.id == 5 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{herb.description}}')">Description</button></h5>
+                    {% elif herb.id == 6 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{herb.description}}')">Description</button></h5>
+                    {% elif herb.id == 7 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{herb.description}}')">Description</button></h5>
+                    {% elif herb.id == 8 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{herb.description}}')">Description</button></h5>
+                    {% elif herb.id == 9 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{herb.description}}')">Description</button></h5>
+                    {% elif herb.id == 10 %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.write('{{herb.description}}')">Description</button></h5>
+                    
+                    {% endif %}
+                </div>
+            {% endfor %}  
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+
+<style>
+    .container{
+        text-align: left;
+        height: 300px;
+        display: table-cell;
+        vertical-align: bottom;
+        font-size: larger;
+    }
+</style>
+
+
+
+<div class="container">
+    <h2>Create Greenhouse</h2>
+    <div>
+        <div>
+            {% for greenhouse in greenhouses %}
+                <div>
+                    <!--Leaving this in but it's not needed now.-->                      
+                    <!--{% if greenhouse.id == 1 %}-->
+                    <a href="{% url 'gh1' %}">Greenhouse 1</a>
+                    <!--{% elif greenhouse.id == 2 %}-->
+                    <a href="{% url 'gh2' %}">Greenhouse 2</a> 
+                    <!--{% elif greenhouse.id == 3 %}-->
+                    <a href="{% url 'gh3' %}">Greenhouse 3</a> 
+                    <!--{% elif greenhouse.id == 4 %}-->
+                    <a href="{% url 'gh4' %}">Greenhouse 4</a> 
+                    <!--{% elif greenhouse.id == 5 %}-->
+                    <a href="{% url 'gh5' %}">Greenhouse 5</a> 
+                    <!--{% elif greenhouse.id == 6 %}-->
+                    <a href="{% url 'gh6' %}">Greenhouse 6</a> 
+                    <!--{% elif greenhouse.id == 7 %}-->
+                    <a href="{% url 'gh7' %}">Greenhouse 7</a>
+
+                    <!--{% endif %}-->
+                </div>
+            {% endfor %}  
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
