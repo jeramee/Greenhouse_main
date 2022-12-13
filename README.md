@@ -9,23 +9,39 @@ The reason for this is that each greenhouse is a separate object and would need 
 I am not sure how to implement this, but I was able to generate a webpage with the 3rd part software Django as well as generate an SQLite database.
 Website Instructions:
 These steps are necessary.
+
 pip install django
 pip install django-extensions
+
 or 
+
 conda install django (if you use Anaconda which I do, used to use venv.)
 pip install django-extensions 
+
 If you get into my Greenhouse_main folder the one with the manage.py
+
 python manage.py runserver
-Then: http://127.0.0.1:8000
+
+Then: 
+http://127.0.0.1:8000
+
 This will access the website
+
 Database:
+
 I did change the database up a bit.
 You no longer need to create a superuser for the database
+
 Just go to here:
+
 http://127.0.0.1:8000/admin/
+
 Type:
+
 admin 
+
 password
+
 This will get you into the database.
 
 I also tried to create a Jupyterlite Lab with all environmental configurations working right out of the box.
