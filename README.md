@@ -49,13 +49,21 @@ I was unable to do this without paid for static webhosting. That is why I did no
 It’s not developed enough to warrant paying a monthly subscription for something like Heroku.
 I’d like to at some point recreate Gregory Mendel’s research into inheritance. 
 However, I will need to know how to marry JS with Python to add radial buttons, and make everything look nice. (Although, I may just use Ajax instead of JS because Django uses Ajax straight out of the box, but I must first learn Ajax.)
+
 As an example of how I would recreate Mendel’s work:
+
 I can create radial buttons for:
+
 Pea Color
+
 Yellow Peas
+
 Green Peas
+
 Pea shape
+
 Wrinkled Peas
+
 Unwrinkled Peas
 
 Then, I’d like to create a way that users can add radial buttons from the SQLite database without the necessity of coding anything. (I am not there yet, but this isn’t that hard.)
