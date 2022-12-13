@@ -13,11 +13,13 @@ Website Instructions:
 These steps are necessary.
 
 pip install django
+
 pip install django-extensions
 
 or 
 
 conda install django (if you use Anaconda which I do, used to use venv.)
+
 pip install django-extensions 
 
 If you get into my Greenhouse_main folder the one with the manage.py
