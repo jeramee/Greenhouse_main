@@ -334,10 +334,6 @@ def gh7(request):
     context = {'gh7': gh7}
     return render(request, 'base/gh7.html', context)
 
-def add_plant(request):
-    context = {'add_plant': add_plant}
-    return render(request, 'base/add_plant.html', context)
-
 def add_device(request):
     context = {'add_device': add_device}
     return render(request, 'base/add_device.html', context)

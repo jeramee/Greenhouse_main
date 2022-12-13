@@ -2,11 +2,9 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Greenhouse, Plant, Device, Vegetable, Fruit, Herb
+from .models import Greenhouse, Device, Vegetable, Fruit, Herb
 
 admin.site.register(Greenhouse)
-
-admin.site.register(Plant)
 
 admin.site.register(Device)
 

@@ -2,14 +2,7 @@ from django.db import models
 from django.utils.translation import gettext as _
 '''from django.conf import settings'''
 
-
 # Create your models here.
-class Plant(models.Model):
-    name = models.CharField(max_length=200)
-    description = models.TextField(null=True, blank=True)
-
-    def __str__(self):
-        return self.name
 
 class Device(models.Model):
     name = models.CharField(max_length=200)
@@ -45,8 +38,6 @@ class Herb(models.Model):
 
 class Greenhouse(models.Model):
     name = models.CharField(max_length=200)
-    description = models.TextField(null=True, blank=True)
-    plants = models.ManyToManyField(Plant)
     fruits = models.ManyToManyField(Fruit)
     herbs = models.ManyToManyField(Herb)
     vegetables = models.ManyToManyField(Vegetable)
