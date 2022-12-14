@@ -7,7 +7,7 @@
 This program creates a webpage that is a greenhouse object.
 You can go to individual greenhouses and see what is available to add to the greenhouse.
 It reads in a dictionary of devices, fruits, vegetables, and herbs as potential inventory for the greenhouse, and displays those things to the screen.
-It loads this data on the backend of as an SQLite database.
+It loads this data on the backend of an SQLite database.
 However, the database is incomplete. The program itself will not crash. However, if you try to add and remove things from the greenhouse using the database it will crash because the database in incomplete.
 The reason for this is that each greenhouse is a separate object and would need a separate database for each, or a separate table for each at a bare minimum.
 I am not sure how to implement this, but I was able to generate a webpage with the 3rd part software Django as well as generate an SQLite database.
