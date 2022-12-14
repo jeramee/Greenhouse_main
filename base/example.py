@@ -252,29 +252,29 @@ def get_all_devices():
     '''read device dictionary and return the result'''
     for device in devices:
         pprint(device)
-    '''press any key to continue'''
-    input("Press any key to continue...")
+    '''press enter to continue'''
+    input("Press enter to continue...")
 
 def get_all_herbs():
     '''read herb dictionary and return the result'''
     for herb in herbs:
         pprint(herb)
-    '''press any key to continue'''
-    input("Press any key to continue...")   
+    '''press enter to continue'''
+    input("Press enter to continue...")  
 
 def get_all_vegetables():
     '''read vegetable dictionary and return the result'''
     for vegetable in vegetables:
         pprint(vegetable)
-    '''press any key to continue'''
-    input("Press any key to continue...")    
+    '''press enter to continue'''
+    input("Press enter to continue...")    
 
 def get_all_fruits():
     '''read fruit dictionary and return the result'''
     for fruit in fruits:
         pprint(fruit)
-    '''press any key to continue'''
-    input("Press any key to continue...")    
+    '''press enter to continue'''
+    input("Press enter to continue...")   
 
 def greenhouse():
     '''calls the get_all_herbs() function and returns the result'''
