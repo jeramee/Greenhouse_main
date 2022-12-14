@@ -1,18 +1,5 @@
-from django.shortcuts import render
-from base.models import Vegetable, Fruit, Herb
-from django.views.generic import ListView
-import logging
+from pprint import pprint
 
-# Create your views here.
-greenhouses = [
-    {'id': 1, 'name': 'Greenhouse 1'},
-    {'id': 2, 'name': 'Greenhouse 2'},   
-    {'id': 3, 'name': 'Greenhouse 3'},
-    {'id': 4, 'name': 'Greenhouse 4'},
-    {'id': 5, 'name': 'Greenhouse 5'},   
-    {'id': 6, 'name': 'Greenhouse 6'},
-    {'id': 7, 'name': 'Greenhouse 7'}
-]
 
 vegetables = [
     {
@@ -260,232 +247,46 @@ devices = [
         'image': 'https://en.wikipedia.org/wiki/Hose#/media/File:Garden_hose.jpg',
     }
 ]
-    
+  
+def get_all_devices():
+    '''read device dictionary and return the result'''
+    for device in devices:
+        pprint(device)
+    '''press any key to continue'''
+    input("Press any key to continue...")
 
-def home(request):
-    context = {'greenhouses': greenhouses}
-    return render(request, 'base/home.html', context)
+def get_all_herbs():
+    '''read herb dictionary and return the result'''
+    for herb in herbs:
+        pprint(herb)
+    '''press any key to continue'''
+    input("Press any key to continue...")   
 
-def greenhouse(request, pk):
-    greenhouse = None
-    for i in greenhouses:
-        if i['id'] == int(pk):
-            greenhouse = i
-    context = {'greenhouse': greenhouse}
-    return render(request, 'base/greenhouse.html', context)
+def get_all_vegetables():
+    '''read vegetable dictionary and return the result'''
+    for vegetable in vegetables:
+        pprint(vegetable)
+    '''press any key to continue'''
+    input("Press any key to continue...")    
 
-def device(request, pk):
-    device = None
-    for i in device:
-        if i['id'] == int(pk):
-            device = i
-    context = {'device': device}
-    logging.info("This is the device function in views.py")
-    return render(request, 'base/device.html', context)
+def get_all_fruits():
+    '''read fruit dictionary and return the result'''
+    for fruit in fruits:
+        pprint(fruit)
+    '''press any key to continue'''
+    input("Press any key to continue...")    
 
-def fruit(request, pk):
-    fruit = None
-    for i in fruit:
-        if i['id'] == int(pk):
-            fruit = i
-    context = {'fruit': fruit}
-    return render(request, 'base/fruit.html', context)    
+def greenhouse():
+    '''calls the get_all_herbs() function and returns the result'''
+    get_all_devices()
+    get_all_herbs()
+    get_all_vegetables()
+    get_all_fruits()
 
-def herb(request, pk):
-    herb = None
-    for i in herb:
-        if i['id'] == int(pk):
-            herb = i
-    context = {'herb': herb}
-    return render(request, 'base/herb.html', context)
-
-def vegetable(request, pk):
-    vegetable = None
-    for i in vegetable:
-        if i['id'] == int(pk):
-            vegetable = i
-    context = {'vegetable': vegetable}
-    return render(request, 'base/vegetable.html', context)
-
-# Various Greenhouse Objects
-def gh1(request):
-    context = {'gh1': gh1}
-    return render(request, 'base/gh1.html', context)
-
-def gh2(request):
-    context = {'gh2': gh2}
-    return render(request, 'base/gh2.html', context)
-
-def gh3(request):
-    context = {'gh3': gh3}
-    return render(request, 'base/gh3.html', context)
-
-def gh4(request):
-    context = {'gh4': gh4}
-    return render(request, 'base/gh4.html', context)
-
-def gh5(request):
-    context = {'gh5': gh5}
-    return render(request, 'base/gh5.html', context)
-
-def gh6(request):
-    context = {'gh6': gh6}
-    return render(request, 'base/gh6.html', context)
-
-def gh7(request):
-    context = {'gh7': gh7}
-    return render(request, 'base/gh7.html', context)
-
-def add_device(request):
-    context = {'add_device': add_device}
-    return render(request, 'base/add_device.html', context)
-
-
-# Devices for various greenhouses
-def gh1_add_device(request):
-    context = {'devices': devices}
-    logging.info("This is the gh1_add_device function in views.py")
-    return render(request, 'base/devices/gh1_add_device.html', context)
-
-def gh2_add_device(request):
-    context = {'devices': devices}
-    return render(request, 'base/devices/gh2_add_device.html', context)
-
-def gh3_add_device(request):
-    context = {'devices': devices}
-    return render(request, 'base/devices/gh3_add_device.html', context)
-
-def gh4_add_device(request):
-    context = {'devices': devices}
-    return render(request, 'base/devices/gh4_add_device.html', context)
-
-def gh5_add_device(request):
-    context = {'devices': devices}
-    return render(request, 'base/devices/gh5_add_device.html', context)
-
-def gh6_add_device(request):
-    context = {'devices': devices}
-    return render(request, 'base/devices/gh6_add_device.html', context)
-
-def gh7_add_device(request):
-    context = {'devices': devices}
-    return render(request, 'base/devices/gh7_add_device.html', context)
-
-
-# Fruits for various greenhouses
-def gh1_add_fruit(request):
-    context = {'fruits': fruits}
-    return render(request, 'base/fruits/gh1_add_fruit.html', context)
-
-def gh2_add_fruit(request):
-    context = {'fruits': fruits}
-    return render(request, 'base/fruits/gh2_add_fruit.html', context)
-
-def gh3_add_fruit(request):
-    context = {'fruits': fruits}
-    return render(request, 'base/fruits/gh3_add_fruit.html', context)
-
-def gh4_add_fruit(request):
-    context = {'fruits': fruits}
-    return render(request, 'base/fruits/gh4_add_fruit.html', context)
-
-def gh5_add_fruit(request):
-    context = {'fruits': fruits}
-    return render(request, 'base/fruits/gh5_add_fruit.html', context)
-
-def gh6_add_fruit(request):
-    context = {'fruits': fruits}
-    return render(request, 'base/fruits/gh6_add_fruit.html', context)
-
-def gh7_add_fruit(request):
-    context = {'fruits': fruits}
-    return render(request, 'base/fruits/gh7_add_fruit.html', context)
-
-
-# Herbs for various greenhouses
-def gh1_add_herb(request):
-    context = {'herbs': herbs}
-    return render(request, 'base/herbs/gh1_add_herb.html', context)
-
-def gh2_add_herb(request):
-    context = {'herbs': herbs}
-    return render(request, 'base/herbs/gh2_add_herb.html', context)
-
-def gh3_add_herb(request):
-    context = {'herbs': herbs}
-    return render(request, 'base/herbs/gh3_add_herb.html', context)
-
-def gh4_add_herb(request):
-    context = {'herbs': herbs}
-    return render(request, 'base/herbs/gh4_add_herb.html', context)
-
-def gh5_add_herb(request):
-    context = {'herbs': herbs}
-    return render(request, 'base/herbs/gh5_add_herb.html', context)
-
-def gh6_add_herb(request):
-    context = {'herbs': herbs}
-    return render(request, 'base/herbs/gh6_add_herb.html', context)
-
-def gh7_add_herb(request):
-    context = {'herbs': herbs}
-    return render(request, 'base/herbs/gh7_add_herb.html', context)
-
-
-# Vegetables for various greenhouses
-def gh1_add_vegetable(request):
-    context = {'vegetables': vegetables}
-    return render(request, 'base/vegetables/gh1_add_vegetable.html', context)
-
-def gh2_add_vegetable(request):
-    context = {'vegetables': vegetables}
-    return render(request, 'base/vegetables/gh2_add_vegetable.html', context)
-
-def gh3_add_vegetable(request):
-    context = {'vegetables': vegetables}
-    return render(request, 'base/vegetables/gh3_add_vegetable.html', context)
-
-def gh4_add_vegetable(request):
-    context = {'vegetables': vegetables}
-    return render(request, 'base/vegetables/gh4_add_vegetable.html', context)
-
-def gh5_add_vegetable(request):
-    context = {'vegetables': vegetables}
-    return render(request, 'base/vegetables/gh5_add_vegetable.html', context)
-
-def gh6_add_vegetable(request):
-    context = {'vegetables': vegetables}
-    return render(request, 'base/vegetables/gh6_add_vegetable.html', context)
-
-def gh7_add_vegetable(request):
-    context = {'vegetables': vegetables}
-    return render(request, 'base/vegetables/gh7_add_vegetable.html', context)
-
-# Dictionary to store inventory while the user is logged in
-def gh1_dictionary(request):
-    context = {'gh1_dictionary': gh1_dictionary}
-    return render(request, 'base/gh1_dictionary.html', context)
-
-def gh2_dictionary(request):
-    context = {'gh2_dictionary': gh2_dictionary}
-    return render(request, 'base/gh2_dictionary.html', context)
-
-def gh3_dictionary(request):
-    context = {'gh3_dictionary': gh3_dictionary}
-    return render(request, 'base/gh3_dictionary.html', context)
-
-def gh4_dictionary(request):
-    context = {'gh4_dictionary': gh4_dictionary}
-    return render(request, 'base/gh4_dictionary.html', context)
-
-def gh5_dictionary(request):
-    context = {'gh5_dictionary': gh5_dictionary}
-    return render(request, 'base/gh5_dictionary.html', context)
-
-def gh6_dictionary(request):
-    context = {'gh6_dictionary': gh6_dictionary}
-    return render(request, 'base/gh6_dictionary.html', context)
-
-def gh7_dictionary(request):
-    context = {'gh7_dictionary': gh7_dictionary}
-    return render(request, 'base/gh7_dictionary.html', context)
+greenhouse1 = greenhouse()
+greenhouse2 = greenhouse()
+greenhouse3 = greenhouse()
+greenhouse4 = greenhouse()
+greenhouse5 = greenhouse()
+greenhouse6 = greenhouse()
+greenhouse7 = greenhouse()

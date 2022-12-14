@@ -1,12 +1,16 @@
 from django.db import models
 from django.utils.translation import gettext as _
 '''from django.conf import settings'''
+import logging
 
 # Create your models here.
 
 class Device(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True)
+    image = models.ImageField(upload_to='images/', null=True, blank=True)
+    quantity = models.IntegerField(default=0)
+    logging.info("This is the Device Class in Models.py")
 
     def __str__(self):
         return self.name
@@ -16,6 +20,7 @@ class Vegetable(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True)
     image = models.ImageField(upload_to='images/', null=True, blank=True)
+    quantity = models.IntegerField(default=0)
 
     def __str__(self):
         return self.name
@@ -24,6 +29,7 @@ class Fruit(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True)
     image = models.ImageField(upload_to='images/', null=True, blank=True)
+    quantity = models.IntegerField(default=0)
 
     def __str__(self):
         return self.name
@@ -32,6 +38,7 @@ class Herb(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True)
     image = models.ImageField(upload_to='images/', null=True, blank=True)
+    quantity = models.IntegerField(default=0)
 
     def __str__(self):
         return self.name
