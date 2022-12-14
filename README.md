@@ -1,3 +1,7 @@
+# INF360 - Programming in Python
+# Jeramee Oliver
+# Final Project - Greenhouse website
+
 # Greenhouse_main
 
 This program creates a webpage that is a greenhouse object.
